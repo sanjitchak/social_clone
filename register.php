@@ -10,11 +10,26 @@ require 'includes/form_handlers/login_handler.php';
 <head>
 
     <title>Social Network Register/Logn</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+    <script src="assets/js/register.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 </head>
 
 <body>
+    <?php
+    if (isset($_POST['register_button'])) {
+        echo '<script>
+$(document).ready(function() {
+$("#first").hide();
+$("#second").show();
+});
+    
+</script>
+
+    ';
+    }
+    ?>
     <div class="wrapper">
         <div class="login_box">
             <div class="login_header">
